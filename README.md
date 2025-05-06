@@ -1,43 +1,64 @@
-# Zsh Configuration
+# Zsh Configuration and macOS Setup
 
-This repository contains a custom Zsh setup using the Powerlevel10k theme, syntax highlighting, autosuggestions, enhanced `ls` output, and tools like Zoxide and Yazi for efficient terminal navigation.
+This repository contains a custom mac Zsh setup for my usecases. It includes theming, useful CLI tools, and an advanced tiling window manager.
 
-## Features
+## Features (& To Installs)
 
-- [Powerlevel10k](https://github.com/romkatv/powerlevel10k) theme
-- Syntax highlighting
-- Autosuggestions
-- Enhanced `ls` with [eza](https://github.com/eza-community/eza)
-- Fast directory jumping with [zoxide](https://github.com/ajeetdsouza/zoxide)
-- File manager integration with [Yazi](https://github.com/sxyazi/yazi)
-- Conda integration for managing environments
-- Persistent and shareable history
+- **Powerlevel10k** Zsh theme with autosuggestions & syntax highlighting
+- **eza** for modern file listings
+- **zoxide** for smart directory navigation
+- **yazi** terminal file manager
+- **WezTerm** terminal emulator
+- **Aerospace** tiling window manager for macOS
+- **aerospace-swipe** for gesture-based workspace navigation
+- **SketchyBar** for a minimal, customizable status bar
+- **Raycast** as a Spotlight replacement
+- **GitHub CLI (gh)** for terminal GitHub interactions
+
+---
 
 ## Installation
 
 ### 1. Prerequisites
 
-Ensure you have the following installed:
-
-- **Zsh**: `brew install zsh`
-- **Homebrew**: [Install Homebrew](https://brew.sh/)
-- **Oh My Zsh (optional)**: `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
-
-### 2. Install Required Tools
+Install [Homebrew](https://brew.sh/):
 
 ```sh
-# Powerlevel10k
-brew install romkatv/powerlevel10k/powerlevel10k
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
 
-# Zsh plugins
+### 2. Terminal Setup
+
+```# Zsh + Enhancements
+brew install zsh
+brew install romkatv/powerlevel10k/powerlevel10k
 brew install zsh-syntax-highlighting
 brew install zsh-autosuggestions
-
-# eza (modern replacement for ls)
 brew install eza
-
-# zoxide (jump around directories)
 brew install zoxide
-
-# yazi (terminal file manager)
 brew install yazi
+
+# Move .zshrc and .p10k.zsh
+cp ~/.config/zshrc/.zshrc ~/.zshrc
+cp ~/.config/zshrc/.p10k.zsh ~/.p10k.zsh
+```
+
+⸻
+
+### 3. Terminal Emulator: WezTerm
+
+```brew install --cask wezterm```
+
+Set as default terminal for best font + theme rendering.
+
+⸻
+
+### 4. Others
+
+- **Raycast** as a Spotlight replacement
+- **Beeper** as a messaging replacement
+- **ChatGPT Desktop** as a desktop assistant
+- **Arc** as a browser replacement
+- **GitHub CLI (gh)** for terminal GitHub interactions
+- **VSCode** as a code editor of choice
+- **JetBrains Mono** as font of choice
