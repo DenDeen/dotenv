@@ -1,0 +1,31 @@
+#!/usr/bin/env sh
+
+CONFIG_DIR="$HOME/.config/sketchybar" # Directory where the sketchybar configuration is stored
+FONT="Jetbrains Mono"
+
+# Setting up the general bar appearance and default values
+sketchybar  --bar       display=main                                        \
+                        height=38                                           \
+                        blur_radius=30                                      \
+                        margin=0                                            \
+                        y_offset=0                                          \
+                        padding_left=20                                     \
+                        padding_right=10                                    \
+                        sticky=on                                           \
+                        color=0xff000000                                    \
+                        
+            --default   updates=when_shown                                  \
+                        drawing=on                                          \
+                        icon.color=0xffffffff                               \
+                        label.font="$FONT:Light:14.0"                       \
+                        label.color=0xffffffff                              \
+                        label.padding_left=4                                \
+                        label.padding_right=4                               \
+                        icon.padding_left=4                                 \
+                        icon.padding_right=4
+                                                                       
+source $CONFIG_DIR/items/spaces.sh
+source $CONFIG_DIR/items/window_title.sh
+source $CONFIG_DIR/items/clock.sh
+
+sketchybar --update
